@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+
+<div class="col-lg-12">
+  <div class="main-box clearfix">
+    <header class="main-box-header clearfix">
+      <h2 class="pull-left"><%= t(:listing_students, scope: [:panel, :text]) %></h2>
+      
+      <div class="filter-block pull-right">
+
+        <%= link_to t(:new_student, scope: [:panel, :buttons]), new_student_path, class: "btn btn-primary pull-right" %>
+      </div>
+    </header>
+    
+    <div class="main-box-body clearfix">
+      <div class="table-responsive">
+        <table class="table">
+        <thead>
+          <tr>
+            <th><%= t(:name, scope: [:panel, :labels]) %></th>
+            <th><%= t(:register_number, scope: [:panel, :labels]) %></th>
+            <th><%= t(:student_course, scope: [:panel, :labels]) %></th>
+            <th>Status</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+          <tbody>
+            <% @students.each do |student| %>
+              <tr>
+                <td><%= student.name %></td>
+                <td><%= student.register_number %></td>
+                <td><%= student.courses.first.name %></td>
+                <td><%= student.status ? t(:active, scope: [:panel, :text]) : t(:inactive, scope: [:panel, :text]) %></td>
+                <td><%= link_to t(:back, scope: [:panel, :buttons]), student %></td>
+                <td><%= link_to t(:edit, scope: [:panel, :buttons]), edit_student_path(student) %></td>
+                <td><%= link_to t(:destroy, scope: [:panel, :buttons]), student, method: :delete, data: { confirm: t(:sure, scope: [:panel, :confirmation_messages]) } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

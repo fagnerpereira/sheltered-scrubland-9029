@@ -1,0 +1,15 @@
+pt:
+  activerecord:
+    attributes:
+      student:
+        name: Nome
+        register_number: Número de registro
+      course:
+        name: Nome
+        description: Descrição
+    errors:
+      models:
+        student:
+          blank: "não pode ficar em branco"
+        course:
+          blank: "não pode ficar em branco"

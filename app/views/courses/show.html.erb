@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t(:name, scope: [:panel, :labels]) %>:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong><%= t(:description, scope: [:panel, :labels]) %>:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @course.status %>
+</p>
+
+<%= link_to t(:edit, scope: [:panel, :buttons]), edit_course_path(@course) %> |
+<%= link_to t(:back, scope: [:panel, :buttons]), courses_path %>

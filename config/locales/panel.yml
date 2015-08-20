@@ -1,0 +1,33 @@
+pt:
+  panel:
+    buttons:
+      show: Mostrar
+      back: Voltar
+      edit: Editar
+      destroy: Deletar
+      new_course: Novo curso
+      new_student: Novo estudante
+      submit: Submeter
+    labels:
+      name: Nome
+      description: Descrição
+      register_number: Número de registro
+      student_course: Curso
+    success_messages:
+    error_messages:
+      error: Erro
+    confirmation_messages:
+      sure: Tem certeza?
+    text:
+      listing_courses: Lista de cursos
+      editing_courses: Editando de cursos
+      listing_students: Lista de estudantes
+      editing_students: Editando estudante
+      new_course: Novo curso
+      new_student: Novo estudante
+      inactive: Inativo
+      active: Ativo
+    notices:
+      successfully_created: Criado com sucesso
+      successfully_updated: Atualizado com sucesso
+      successfully_destroyed: Apagado com sucesso

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t(:name, scope: [:panel, :labels]) %>:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong><%= t(:register_number, scope: [:panel, :labels]) %>:</strong>
+  <%= @student.register_number %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @student.status %>
+</p>
+
+<%= link_to t(:edit, scope: [:panel, :buttons]), edit_student_path(@student) %> |
+<%= link_to t(:back, scope: [:panel, :buttons]), students_path %>
